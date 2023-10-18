@@ -1,4 +1,4 @@
-import imgAbout from '../assets/imagenAboutcuadrado.png'
+import imgAbout from '../assets/fotodeperfil.jpeg'
 
 function About(){
     return(
