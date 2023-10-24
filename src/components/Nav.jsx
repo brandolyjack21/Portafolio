@@ -1,23 +1,41 @@
 import React from 'react'
+import { useState } from 'react'
 
 function Nav() {
+
+  const [ positionDiv, setPositionDiv ] = useState(false)
+  const [ selectedButton, setSelectedButton ] = useState(null)
+
+  const menuOptions = [
+    { id:1 , iconClass:'bx bx-home', name:'Inicio' },
+    { id:2 , iconClass:'bx bx-user', name:'Acerca de' },
+    { id:3 , iconClass:'bx bx-folder', name:'Portafolio' },
+    { id:4 , iconClass:'bx bxl-whatsapp', name:'Contactame' }
+  ]
+
+  const bgColor = (id) => {
+    setSelectedButton(id)
+    setPositionDiv(!positionDiv)
+  }
   return (
     <>
       <nav className='nav'>
-        <section className='nav-section container-menu'>
+        <section className='container-menu-amburguesa'>
+          <span className='menu-ambuerguesa' onClick={ () => setPositionDiv(!positionDiv)}>
+            <div className={  positionDiv ? 'rotateDiv': ''  }></div>
+            <div className={  positionDiv ? 'visibilityDiv': ''  }></div>
+            <div className={  positionDiv ? 'rotateDiv2': ''  }></div>
+          </span>
+        </section>
+        <section className={ positionDiv?'nav-section container-menu':'nav-section' }>
             <ul className='container-list'>
-                <a href="">
-                    <li className='list'><i class='bx bx-home' ></i><span className='span'>Inicio</span></li>
-                </a>
-                <a href="">
-                    <li className='list'><i class='bx bx-user'></i><span className='span'>Acerca de </span></li>
-                </a>
-                <a href="">
-                    <li className='list'><i class='bx bx-folder'></i><span className='span'>Portafolio</span></li>
-                </a>
-                <a href="">
-                    <li className='list'><i class='bx bxl-whatsapp'></i><span className='span'>Contactame</span></li>
-                </a>
+
+              {
+                menuOptions.map( (option) => (
+                  <li className={ selectedButton === option.id ? 'list listSelect': 'list' } key={option.id} onClick={() => bgColor(option.id)}><i class={option.iconClass}></i><span className='span'>{ option.name }</span></li>
+                ))
+              }
+                
             </ul>
         </section>
       </nav>

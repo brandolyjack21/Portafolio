@@ -1,6 +1,12 @@
 import React from 'react'
 
 function Home() {
+
+  const networks = [
+    { iconClass:'bx bxl-netlify', link:'' },
+    { iconClass:'bx bxl-github', link:'' },
+    { iconClass:'bx bxl-linkedin', link:'' }
+  ]
   return (
     <>
         <section className='container-home'>
@@ -10,6 +16,15 @@ function Home() {
                 </div>
                 <span className='name'>Brandoly Jack Figueroa Gonzales</span>
             </article>
+            <ul className='container-networks'>
+              {
+                networks.map( network => (
+                  <li className='network'>
+                    <i class={ network.iconClass } ></i>
+                  </li>
+                ))
+              }
+            </ul>
         </section> 
 
     </>
