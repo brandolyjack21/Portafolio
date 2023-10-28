@@ -11,7 +11,12 @@ img{
 
 /* header */
 
-@media (max-width:425px) {
+ html, body{
+  width: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width:768px) {
   
   header{
     position: fixed;
@@ -35,7 +40,7 @@ li{
   list-style: none;
 }
 
-@media (max-width:425px) {
+@media (max-width:768px) {
   
   .nav{
     width: 100vw;
@@ -200,7 +205,7 @@ li{
 
 /* Home style */
 
-@media (max-width:425px) {
+@media (max-width:768px) {
   
   .container-home{
     width: 100vw;
@@ -317,7 +322,7 @@ li{
 }
 /* -------------------About------------ */
 
-@media (max-width:425px) {
+@media (max-width:768px) {
   
   .container-about{
     width: 100vw;
@@ -467,7 +472,7 @@ li{
 }
 /* Portafolio */
 
-@media (max-width:425px) {
+@media (max-width:768px) {
   
   .container-portafolio{
     width: 100vw;
@@ -637,7 +642,7 @@ li{
 
 /* contacto */
 
-@media ( max-width:425px ) {
+@media ( max-width:768px ) {
   
   .container-contacto{
     width: 100vw;
