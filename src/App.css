@@ -9,6 +9,12 @@ img{
   height: 100%;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* header */
 
  html, body{
@@ -143,65 +149,59 @@ li{
   }
 }
 
-@media (min-width:1024px) {
+@media ( min-width:1024px ) {
   
-
-  .nav{
-    width: 60px;
+  header{
+    position: absolute;
+    width: max-content;
     height: 100vh;
     background-color: transparent;
-    display: flex;
-    align-items: center;
-    padding: 30px 10px;
+    top: 0;
+    left: 0;
+    z-index: 99;
   }
-  
-  .nav-section{
-    width: 100%;
-    height: max-content;
-  }
-  
-  .container-list{
+
+  .nav{
+    width: max-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 20px;
+  }
+
+  .container-list{
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
-  
+
   .list{
-    width: 56px;
-    height: 56px;
-    border-radius: 50px;
-    background-color: blue;
-    gap: 15px;
+    width: 50px;
+    height: 50px;
     overflow: hidden;
-    padding-left: 18px;
+    border-radius: 25px;
     display: flex;
+    text-align: justify;
     align-items: center;
-    transition: all .2s ease-in-out;
+    gap: 15px;
+    border: solid 1px black;
+    white-space: pre;
+    padding: 0 9px;
+    font-size: 30px;
+    background-color: white;
+    transition: all .5s ease-in-out;
   }
-  
+
   .list:hover{
-    width: 150px;
-  }
-  
-  .bx{
-    font-size: 20px;
-    color: white;
-    display: block;
-  }
-  .span{
-    width: max-content;
-    font-size: 15px;
-    color: white;
-    visibility: hidden;
-  }
-  
-  .list:hover .span{
-    width: 200px;
-    visibility: visible;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 220px;
+    border-radius: 25px;
   }
 }
+
+
 
 /* Home style */
 
@@ -276,11 +276,15 @@ li{
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url(./assets/Imagenhome.jpg);
+    background-image: url(./assets/inteligencia_artificial.webp);
+    background-repeat: no-repeat;
     background-size: 100%;
+    background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding-left: 170px;
     z-index: 20;
   }
   
@@ -291,7 +295,7 @@ li{
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.788);
+    background-color: rgba(0, 0, 0, 0.541);
     z-index: 25;
   }
   
@@ -301,21 +305,38 @@ li{
     height: max-content;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    align-items: start;
+    gap: 30px;
     z-index: 30;
-    padding-right: 400px;
+    padding-right: 300px;
   }
   
   .programador-title{
     font-size: 60px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #45505b;
+    color: #ffffff;
   }
   
   .name{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
+    color: #bb054f;
+  }
+
+  .container-networks{
+    display: flex;
+    padding: 50px 0 0 30px;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .network{
+    color: white;
+    font-size: 50px;
+  }
+
+  .network:hover{
     color: #0563bb;
   }
   
@@ -345,7 +366,7 @@ li{
     padding: 100px 0;
     text-align: center;
     font-size: 25px;
-    font-family:'Raleway', sans-serif;;
+    font-family:'Raleway', sans-serif;
   }
 
   .container-h2::after{
@@ -382,94 +403,140 @@ li{
   }
 }
 
+@media (max-width:768px) {
+  .container-img-and-skils{
+    width: 50%;
+  }
+}
+
 @media (min-width:1024px) {
-  
+
   .container-about{
-    width: 100vw;
-    height: max-content;
+    width: 100%;
+    height: 100vh;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    border: solid 5px transparent;
   }
-  
+
   .body-about{
     width: 70%;
     height: 100%;
+  }
+
+  .container-h2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 60px;
+    font-size: 50px;
+    font-family:'Raleway', sans-serif;
+  }
+
+  .container-h2::before{
+    content: '';
+    width: 600px;
+    height: 2px;
+    background-color: rgb(126, 126, 126);
+    position: absolute;
+    top: 150px;
+  }
+
+  .container-h2::after{
+    content: '';
+    width: 300px;
+    height: 4px;
+    background-color: #0563bb;
+    position: absolute;
+    top: 149px;
+  }
+
+  .container-description-profesional{
+    height: auto;
+    display: flex;
+    padding: 0 10px;
+  }
+
+  .profesional-description{
+    width: 100%;
+    height: auto;
+    padding: auto 10px;
+  }
+
+  .profesional-description .description{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  }
+
+  .title-presentation-project{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 0 0;
+  }
+
+  .container-list-description-projects{
+    width: 100%;
+    border: solid 6px rgba(255, 52, 52, 0);
+    height: auto;
     display: flex;
     flex-direction: column;
+    padding: 20px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-  
-  .container-h2{
+
+  .description-project{
+    display: flex;
     width: 100%;
-    height: 56px;
+    height: 110px;
+    border: solid 2px rgba(0, 0, 0, 0);
+    border: none;
+  }
+
+  .container-line-circle{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    margin-top: 30px;
-    color: #45505b;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 76.97px;
+    height: 100%;
   }
-  
-  .profesional-description p{
-    padding: 20px 10px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-family: 400;
-    color: #0563bb;
-    margin-top: 50px;
+
+  .line{
+    width: 7px;
+    height: 100%;
+    background-color: #0563bb;
   }
-  
-  .container-img-and-skils{
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
+
+  .circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: solid 3px #0563bb;
+    position: absolute;
   }
-  
-  .img-about{
+
+  .project-description{
     width: 500px;
-  }
-  
-  .img-about img{
-    width: 400px;
-    height: 400px;
-  }
-  
-  .description-skils{
-    width: 700px;
-    height: 500px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 10px 0;
+    justify-content: center;
+    padding: 5px 0;
   }
-  
-  .container-habilidades h4{
-      font-size: 30px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: #45505b;
-  }
-  
-  .description-skils ul{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
-    gap: 20px;
-  }
-  
-  .description-skils i{
-    color: #45505b;
-  }
-  
-  .list-habilidades{
-    display: flex;
-    align-items: center;
+
+  .title-discription-project{
     color: #0563bb;
   }
-  
+
+  .img-about{
+    padding: 10px;
+  }
 }
+
+
 /* Portafolio */
 
 @media (max-width:768px) {
@@ -542,101 +609,75 @@ li{
   
   .container-portafolio{
     width: 100vw;
-    height: max-content;
+    height: 100vh;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 30px 0;
   }
-  
+
   .container-portafolio-title{
-    padding: 20px;
-    font-size: 50px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #45505b;
-  }
-  
-  .proyectos-creados{
-    width: 70%;
+    width: 100%;
     height: max-content;
-    padding: 30px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    color: #0563bb;
+    padding: 20px 0 50px;
+    display: flex;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 75px;
+    font-family:'Raleway', sans-serif;
   }
-  
-  .container-list-projects{
-    padding: 20px 0;
-    display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr;
-    gap: 10px;
+
+  .container-portafolio-title::before{
+    content: '';
+    position: absolute;
     width: 600px;
+    height: 2px;
+    background-color: #727272;
+    top: 131px;
   }
-  
-  .container-list-projects li{
-    box-shadow: 0 0 10px #45505b;
-    position: relative;
+
+  .container-portafolio-title::after{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 4px;
+    background-color: #0563bb;
+    top: 130px;
   }
-  
+
+  .proyectos-creados{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-grow: 0;
+    justify-content: center;
+  }
+
+  .proyectos-creados p{
+    width: 1024px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .container-list-projects{
+    width: 1024px;
+    height: auto;
+    padding: 60px 0;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
   .list-projects{
-    position: relative;
-    z-index: 10;
-  }
-  
-  .list-projects:before{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    content: "Click Aqui";
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #45505b7e;
-    transition: all .2s ease-in-out;
-  }
-  
-  
-  .img-project:hover .list-projects:before{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    content: "Click Aqui";
-    visibility: visible;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #45505b7e;
-    z-index: 90;
-  }
-  
-  .list-projects1{
-    grid-column: 1 / 2;
-    grid-row: 1/3;
-  }
-  
-  .list-projects2{
-    grid-column: 2 / 3;
-    grid-row: 1/2;
-  }
-  
-  .list-projects3{
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  
-  .list-projects4{
-    grid-column: 2/3;
-    grid-row: 2/4;
-  }
-  
-  .container-list-projects li img{
-    position: relative;
-    object-fit: cover;
-    z-index: 11;
+    width: 230px;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(126, 126, 126);
   }
 }
 
@@ -756,6 +797,138 @@ li{
     border-radius: 30px;
     font-size: 20px;
   }
+}
+
+
+
+@media ( min-width:1024px ) {
+    
+  .container-contacto{
+    width: 100vw;
+    height: 100vh;
+    border: solid 3px transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-contacto-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    flex-grow: 0;
+  }
+
+  .container-contacto-title::before{
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 2px;
+    background-color: #727272;
+    top: 131px;
+  }
+
+  .container-contacto-title::after{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 4px;
+    background-color: #0563bb;
+    top: 130px;
+  }
+
+  .container-data-form{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    border: solid 3px transparent;
+    padding: 0 50px;
+    width: 1024px;
+  }
+
+  .container-data-contact{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .list-data-contact i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #eef7ff;
+    color: #0563bb;
+  }
+
+  .list-data-contact{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #727272;
+  }
+
+  .list-data-contact h6{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+  }
+
+  .form-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .form-contact input{
+    width: 500px;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+  }
+
+  .form-contact input:focus{
+    border: solid 2px #0563bb;
+  }
+
+  textarea{
+    resize: none;
+    width: 500px;
+    height: 150px;
+  }
+
+  .textarea-contact:focus,
+  .textarea-contact:active {
+    padding: 10px;
+    border: 2px solid #0563bb;
+    outline: none;
+  }
+
+  .button-contact{
+    margin: 0 auto;
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #0563bb;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
 
