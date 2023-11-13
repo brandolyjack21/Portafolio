@@ -6,7 +6,7 @@ import imgPokeapi from "../assets/pokeApi-image-portafolio.png"
 function Portafolio(){
     return (
         <>
-            <section className="container-portafolio">
+            <section id="porfolio" className="container-portafolio">
                 <div className="container-portafolio-title">
                     <h4>Portafolio</h4>
                 </div>
@@ -15,16 +15,28 @@ function Portafolio(){
                 </div>
                 <ul className="container-list-projects">
                     <li className="list-projects list-projects1">
+                        <a href="https://app-delclimaproyecto-trmnd-0045am.netlify.app/">
                         <img className="img-project" src={imgClima} alt="" />
+                        <div className="ancor-click">click aquí</div>
+                        </a>
                     </li>
                     <li className="list-projects list-projects2">
+                        <a href="https://heartfelt-pie-d17b06.netlify.app/">
                         <img className="img-project" src={imgEcomerce} alt="" />
+                        <div className="ancor-click">click aquí</div>
+                        </a>
                     </li>
                     <li className="list-projects list-projects3">
+                        <a href="">
                         <img className="img-project" src={imgPortafolio} alt="" />
+                        <div className="ancor-click">click aquí</div>
+                        </a>
                     </li>
                     <li className="list-projects list-projects4">
+                        <a href="https://spiffy-liger-99f86d.netlify.app/">
                         <img className="img-project" src={imgPokeapi} alt="" />
+                        <div className="ancor-click">click aquí</div>
+                        </a>
                     </li>
                 </ul>
             </section>

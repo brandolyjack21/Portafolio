@@ -22,7 +22,7 @@ function About() {
   ];
   return (
     <>
-      <section className="container-about">
+      <section id="about" className="container-about">
         <article className="body-about">
           <section className="container-h2">
             <h2>Acerca de Mí</h2>

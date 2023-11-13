@@ -1,6 +1,6 @@
 function Contac() {
   return (
-    <article className="container-contacto">
+    <article id="contact" className="container-contacto">
       <section className="container-contacto-title">
         <h4>Contacto</h4>
       </section>
