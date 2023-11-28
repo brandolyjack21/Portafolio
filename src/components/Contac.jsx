@@ -17,7 +17,7 @@ function Contac() {
             <i class="bx bxl-whatsapp"></i>
             <div>
               <h6>WhatsApp:</h6>
-              <span>943 413 353</span>
+              <span>+51 943 413 353</span>
             </div>
           </li>
         </ul>

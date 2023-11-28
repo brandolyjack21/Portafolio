@@ -2,6 +2,7 @@ import imgPortafolio from "../assets/portafolio-img.png"
 import imgEcomerce from "../assets/ecomerce-portafolio-image.png"
 import imgClima from "../assets/app-del-clima.png"
 import imgPokeapi from "../assets/pokeApi-image-portafolio.png"
+import imgEcomerceConBootstrap from '../assets/imgEcomerceConBootstrap.png'
 
 function Portafolio(){
     return (
@@ -35,6 +36,12 @@ function Portafolio(){
                     <li className="list-projects list-projects4">
                         <a href="https://spiffy-liger-99f86d.netlify.app/">
                         <img className="img-project" src={imgPokeapi} alt="" />
+                        <div className="ancor-click">click aquí</div>
+                        </a>
+                    </li>
+                    <li className="list-projects list-projects5">
+                        <a href="https://leafy-phoenix-9da974.netlify.app/#action1">
+                        <img className="img-project" src={imgEcomerceConBootstrap} alt="" />
                         <div className="ancor-click">click aquí</div>
                         </a>
                     </li>

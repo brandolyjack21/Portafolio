@@ -3,9 +3,9 @@ import React from 'react'
 function Home() {
 
   const networks = [
-    { iconClass:'bx bxl-netlify', link:'' },
-    { iconClass:'bx bxl-github', link:'' },
-    { iconClass:'bx bxl-linkedin', link:'' }
+    { iconClass:'bx bxl-netlify', link:'https://app.netlify.com/teams/brandolyjack21/overview' },
+    { iconClass:'bx bxl-github', link:'https://github.com/brandolyjack21' },
+    { iconClass:'bx bxl-linkedin', link:'https://www.linkedin.com/in/brandoly-jack-figueroa-gonz%C3%A1lez-b8b465260/' }
   ]
   return (
     <>
